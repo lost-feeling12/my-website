@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lostly - Trang web của tôi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f5f6fa;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        /* HEADER/NAVIGATION */
+        .header {
+            background-color: #b0c4de;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-container {
+            width: 65px;
+            height: 65px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            mix-blend-mode: multiply;
+        }
+
+        .brand-name {
+            font-size: 38px;
+            font-family: 'Bebas Neue', sans-serif;
+            background: linear-gradient(to right, #00416A, #7887B0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 18px;
+            font-weight: bold;
+            color: #1a252f;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #00416A;
+        }
+
+        /* MAIN CONTENT */
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            padding: 60px 80px;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .content-text {
+            max-width: 45%;
+        }
+
+        .content-text h1 {
+            font-size: 36px;
+            color: #111;
+            margin-bottom: 20px;
+        }
+
+        .content-text p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* SLIDER SECTION */
+        .slider-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .slider-btn {
+            width: 40px;
+            height: 60px;
+            background-color: white;
+            border: 2px solid #b0c4de;
+            border-radius: 20px;
+            font-size: 20px;
+            cursor: pointer;
+            color: #00416A;
+            transition: all 0.3s ease;
+        }
+
+        .slider-btn:hover {
+            background-color: #b0c4de;
+            color: white;
+        }
+
+        .slider-main {
+            text-align: center;
+        }
+
+        .slider-image-box {
+            width: 320px;
+            height: 320px;
+            background-color: #b0c4de;
+            border-radius: 15px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        .slider-image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #00416A;
+        }
+
+        .dot.inactive {
+            background-color: white;
+            border: 1px solid #999;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+                padding: 40px 20px;
+            }
+
+            .content-text {
+                max-width: 100%;
+            }
+
+            .content-text h1 {
+                font-size: 28px;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .nav-links a {
+                font-size: 14px;
+            }
+
+            .slider-image-box {
+                width: 250px;
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER/NAVIGATION -->
+    <div class="header">
+        <!-- Left Section: Logo and Brand Name -->
+        <div class="logo-section">
+            <div class="logo-container">
+                <img src="https://via.placeholder.com/65" alt="Logo">
+            </div>
+            <span class="brand-name">Lostly</span>
+        </div>
+
+        <!-- Right Section: Navigation Links -->
+        <div class="nav-links">
+            <a href="#home">Trang chủ</a>
+            <a href="#products">Sản phẩm</a>
+            <a href="#chat">Trang trò chuyện</a>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+        <!-- Left Section: Text Content -->
+        <div class="content-text">
+            <h1>Chào mừng bạn đến với trang web</h1>
+            <p>Làm mọi thứ bạn muốn, không có thứ gì có thể ngăn cản bạn thực hiện giấc mơ !!!</p>
+        </div>
+
+        <!-- Right Section: Image Slider -->
+        <div class="slider-container">
+            <!-- Left Navigation Button -->
+            <button class="slider-btn" id="prevBtn">❮</button>
+
+            <!-- Main Slider -->
+            <div class="slider-main">
+                <div class="slider-image-box">
+                    <img id="sliderImage" src="https://via.placeholder.com/320?text=Image+1" alt="Slider Image">
+                </div>
+
+                <!-- Indicator Dots -->
+                <div class="slider-dots">
+                    <span class="dot active" onclick="currentSlide(0)"></span>
+                    <span class="dot inactive" onclick="currentSlide(1)"></span>
+                    <span class="dot inactive" onclick="currentSlide(2)"></span>
+                </div>
+            </div>
+
+            <!-- Right Navigation Button -->
+            <button class="slider-btn" id="nextBtn">❯</button>
+        </div>
+    </div>
+
+    <script>
+        // Slider Functionality
+        let currentSlideIndex = 0;
+        const slides = [
+            "https://via.placeholder.com/320?text=Image+1",
+            "https://via.placeholder.com/320?text=Image+2",
+            "https://via.placeholder.com/320?text=Image+3"
+        ];
+
+        function showSlide(index) {
+            const image = document.getElementById('sliderImage');
+            const dots = document.querySelectorAll('.dot');
+
+            // Wrap around if index is out of bounds
+            if (index >= slides.length) {
+                currentSlideIndex = 0;
+            } else if (index < 0) {
+                currentSlideIndex = slides.length - 1;
+            } else {
+                currentSlideIndex = index;
+            }
+
+            // Update image
+            image.src = slides[currentSlideIndex];
+
+            // Update dots
+            dots.forEach((dot, i) => {
+                if (i === currentSlideIndex) {
+                    dot.classList.add('active');
+                    dot.classList.remove('inactive');
+                } else {
+                    dot.classList.remove('active');
+                    dot.classList.add('inactive');
+                }
+            });
+        }
+
+        function currentSlide(index) {
+            showSlide(index);
+        }
+
+        function nextSlide() {
+            showSlide(currentSlideIndex + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlideIndex - 1);
+        }
+
+        // Event Listeners
+        document.getElementById('nextBtn').addEventListener('click', nextSlide);
+        document.getElementById('prevBtn').addEventListener('click', prevSlide);
+    </script>
+</body>
+</html>
